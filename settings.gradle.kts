@@ -12,8 +12,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
         jcenter()
+        maven {
+            url = uri("http://maven.xdja.com:8081/nexus3/repository/public/")
+            // 显式允许该仓库使用不安全协议
+            isAllowInsecureProtocol = true
+        }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
